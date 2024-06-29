@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import IssueList from '../views/IssueList.vue'
-import TodoList from '../views/TodoList.vue'
-import TodosIssues from '../views/TodosIssues.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import IssueList from '../views/IssueList.vue';
+import TodoList from '../views/TodoList.vue';
+import TodosIssues from '../views/TodosIssues.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -28,12 +28,12 @@ const routes = [
     name: 'todos-issues',
     component: TodosIssues
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;
