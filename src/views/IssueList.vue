@@ -38,7 +38,7 @@
 	},
 	methods: {
 	  getIssues() {
-		client.get('/repos/diveintocode-corp/vue_seriese_api/')
+		client.get('https://api.github.com/repos/diveintocode-corp/vue_seriese_api')
 		  .then((res) => {
 			this.issues = res.data;
 		  })
@@ -48,7 +48,7 @@
 	  },
 	  closeIssue(index) {
 		const target = this.issues[index];
-		client.patch(`/repos/diveintocode-corp/vue_seriese_api/${target.number}`, { state: 'closed' })
+		client.patch(`https://api.github.com/repos/diveintocode-corp/vue_seriese_api/${target.number}`, { state: 'closed' })
 		  .then(() => {
 			this.issues.splice(index, 1);
 		  })
