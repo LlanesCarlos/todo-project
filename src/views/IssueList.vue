@@ -38,7 +38,7 @@
 	},
 	methods: {
 	  getIssues() {
-		client.get('/repos/diveintocode-corp/vue_seriese_api/')  // Replace {owner} and {repo} with your actual GitHub owner and repo
+		client.get('/repos/diveintocode-corp/vue_seriese_api/')
 		  .then((res) => {
 			this.issues = res.data;
 		  })
